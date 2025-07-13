@@ -9,6 +9,10 @@ type RestErr struct {
 	Causes  []Causes `json:"causes"`
 }
 
+func (r *RestErr) Status() int {
+	panic("unimplemented")
+}
+
 type Causes struct {
 	Field   string `json:"field"`
 	Message string `json:"message"`
